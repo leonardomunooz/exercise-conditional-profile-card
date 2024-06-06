@@ -51,14 +51,28 @@ function render(variables = {}) {
           </h3>
           <ul class="${variables.socialMediaPosition}">
          
-            <li><a href="${(variables.twitter =
-              "https://x.com/fcbarcelona")}" target= "_blank"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="${(variables.github =
-              "https://github.com/leonardomunooz")}" target= "_blank"><i class="fab fa-github"></i></a></li>
-            <li><a href="${(variables.linkedin =
-              "https://www.linkedin.com/?trk=organization_guest_nav-header-logo")}" target= "_blank"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="${(variables.instagram =
-              "https://www.instagram.com/leonardonms")}" target= "_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="${
+              variables.twitter == null
+                ? "https://x.com/4geeksacademy "
+                : variables.twitter
+            }" target="_blank">             
+            <i class="fab fa-twitter"></i></a>
+            </li>
+            <li><a href="${
+              variables.github == null
+                ? "https://github/4geeksacademy "
+                : variables.github
+            }" target= "_blank"><i class="fab fa-github"></i></a></li>
+            <li><a href="${
+              variables.linkedin == null
+                ? "https://www.linkedin.com/school/4geeksacademy"
+                : variables.linkedin
+            }" target= "_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="${
+              variables.instagram == null
+                ? "https://www.instagram.com/4geeksacademylatam/"
+                : variables.instagram
+            }" target= "_blank"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
     `;
