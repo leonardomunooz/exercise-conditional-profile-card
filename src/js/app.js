@@ -1,3 +1,4 @@
+import { name } from "file-loader";
 import "../style/index.css";
 
 /**
@@ -32,15 +33,32 @@ function render(variables = {}) {
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
-          <img src="${variables.avatarURL}" class="photo" />
-          <h1>Lucy Boilett</h1>
-          <h2>Web Developer</h2>
-          <h3>Miami, USA</h3>
-          <ul class="position-right">
-            <li><a href="https://twitter.com/4geeksacademy"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/school/4geeksacademy"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/4geeksacademy"><i class="fab fa-instagram"></i></a></li>
+          <img src="${(variables.avatarURL =
+            "https://avatars.githubusercontent.com/u/168220131?s=400&u=f94e178038fdf8fa82f91e3639f2d7003d348c4d&v=4")}" class="photo" />
+          <h1>
+            ${variables.name == null ? "pedro " : variables.name}
+            ${variables.lastName == null ? "perez" : variables.lastName}
+          </h1>
+          <h2>
+            ${variables.role == null ? "web developer " : variables.role}
+          </h2>
+          <h3>
+           
+            ${variables.city == null ? "Miami" : variables.city},
+            ${
+              variables.country == null ? "Canada" : variables.country
+            }              
+          </h3>
+          <ul class="${variables.socialMediaPosition}">
+         
+            <li><a href="${(variables.twitter =
+              "https://x.com/fcbarcelona")}" target= "_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="${(variables.github =
+              "https://github.com/leonardomunooz")}" target= "_blank"><i class="fab fa-github"></i></a></li>
+            <li><a href="${(variables.linkedin =
+              "https://www.linkedin.com/?trk=organization_guest_nav-header-logo")}" target= "_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="${(variables.instagram =
+              "https://www.instagram.com/leonardonms")}" target= "_blank"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
     `;
