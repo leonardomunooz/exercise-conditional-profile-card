@@ -2,11 +2,22 @@ body {
   width: 80%;
   border: solid #cbd5e1 1px;
   margin: 5% auto;
+  font-family: "roboto", "sans-serif";
+  font-weight: 200;
+  padding: 16px;
 }
-
+fieldset {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  border: solid #cbd5e1 1px;
+}
 .filters {
   background: white;
-  width: 100%;
+  width: 85%;
+  /* border: solid black 1px; */
+  margin: 0 auto;
+  padding: 16px 0;
 }
 .filters li {
   display: inline-block;
@@ -16,13 +27,15 @@ body {
 .filters li label {
   display: block;
   font-size: 12px;
-  font-weight: 900;
+  font-weight: 500;
 }
 .filters li input {
   width: 100%;
+  border: solid #cbd5e1 1px;
 }
 .filters li select {
   width: 100%;
+  border: solid #cbd5e1 1px;
 }
 
 .widget {
